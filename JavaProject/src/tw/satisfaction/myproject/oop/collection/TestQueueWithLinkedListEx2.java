@@ -36,6 +36,7 @@ public class TestQueueWithLinkedListEx2 {
 	public static void main(String[] args) {
 		TestQueueWithLinkedListEx2 test2 = new TestQueueWithLinkedListEx2();
 		test2.processStoreQueue();
+		System.out.println("test1 : " + test2.queue);
 		test2.processRetrieveQueue();
 	}
 

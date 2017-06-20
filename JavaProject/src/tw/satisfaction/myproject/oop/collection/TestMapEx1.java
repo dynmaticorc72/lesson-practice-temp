@@ -14,6 +14,8 @@ public class TestMapEx1 {
 		map1.put("3rd", "judy");
 		map1.put("3rd", "jerry");
 		map1.put(null, null);
+		
+		map1.remove("3rd");
 
 		Set keys = map1.keySet();
 		Set mapping = map1.entrySet();
@@ -22,7 +24,10 @@ public class TestMapEx1 {
 		System.out.println("keys : " + keys);
 		System.out.println("mapping : " + mapping);
 		System.out.println("values : " + values);
-
+		
+		String second = (String)map1.get("2nd");
+		System.out.println("second : " + second);
+		
 	}
 
 }
