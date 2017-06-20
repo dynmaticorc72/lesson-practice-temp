@@ -1,0 +1,28 @@
+package tw.satisfaction.myproject.oop.collection;
+
+import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class TestMapEx1 {
+
+	public static void main(String[] args) {
+		Map map1 = new LinkedHashMap();
+		map1.put("1st", "mary");
+		map1.put("2nd", "john");
+		map1.put("3rd", "judy");
+		map1.put("3rd", "jerry");
+		map1.put(null, null);
+
+		Set keys = map1.keySet();
+		Set mapping = map1.entrySet();
+		Collection values = map1.values();
+
+		System.out.println("keys : " + keys);
+		System.out.println("mapping : " + mapping);
+		System.out.println("values : " + values);
+
+	}
+
+}
