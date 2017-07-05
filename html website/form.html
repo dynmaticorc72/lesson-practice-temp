@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        *{margin:0  }
+        .st1{width:500px;margin-bottom:10px;border-bottom:3px solid #808080; padding: 5px ;}
+        .sub{width:500px;text-align:center}
+        .t1{width:100px; float:left;/*border:3px solid #ff6a00*/; padding-right:8px; text-align:right; vertical-align:middle}
+        .st2{width:550px; border:3px solid rgba(109, 171, 232, 0.77); border-radius:15px; margin-bottom:5px; }
+        em{color:red}
+    </style>
+</head>
+<body>
+    <form action="#" method="get" autocomplete="off">
+    
+        <fieldset class="st2"> <legend>個人資料 <em>(必填)</em> </legend> 
+            <div class="st1"><label for="account" ; class="t1">帳號</label><input type="text" required id="account" name="account" value=""  autofocus placeholder="山田"  size="50" /></div>
+            <div class="st1"><label for="pwd" ; class="t1">密碼</label><input type="password" id="pwd" name="pwd" maxlength="10" /></div>
+            <div style="text-align:center"><input type="radio" name="sex" value="man" id="man" /> <label for="man">男</label> 
+                  <input type="radio" name="sex"value="woman" id="woman" /> <label for="woman">女</label></div>
+             <div class="st1"><label for="id" class="t1">身分證字號</label><input type="text" id="id" neme="id" pattern="[A-Z]{1}[1-2]{1}\d{8}" maxlength="10"></div>
+        </fieldset>
+        <fieldset class="st2">
+            <legend> <em>地址</em> </legend>
+            
+            <select name="addr">
+                <option value="TPE">台北市</option>
+                <option value="TPH">新北市</option>
+                <option value="TYC">桃園市</option>
+            </select>
+
+        </fieldset>
+        <fieldset class="st2">
+            <legend>個人資料二 </legend>
+            <label>興趣</label>
+            <div class="st1">
+                <input type="checkbox" name="hobby" value="sports" id="sports" /> <label for="sports">運動</label>
+                <input type="checkbox" name="hobby" value="movie" id="movie" /> <label for="movie">電影</label>
+                <input type="checkbox" name="hobby" value="music" id="music" /> <label for="music">音樂</label>
+            </div>
+            <div class="st1">
+                <label class="t1"> homepage</label>
+                <input type="url" name="homepage" list="homepage">
+                <datalist id="homepage">
+                    <option value="http://www.google.com">
+                    <option value="http://www.youtube.com">
+                    <option value="http://www.pchome.com">
+                </datalist>
+            </div>
+        </fieldset>
+        <fieldset class="st2">
+            <div class="st1"><label for="memo" ; class="t1">意見</label><textarea cols="30" rows="10" id="memo" name="memo"></textarea></div>
+            <div class="st1"><label for="photo" ; class="t1">照片</label><input type="file" name="file" /></div>
+        </fieldset>
+         <div class="sub"><input type="submit" value="送出" />
+             <input type="reset" value="清除" /></div>
+        <fieldset class="st2">
+            <label class="t1"></label>
+            日期<input type="date" name="日期" /><br />
+            datetime-local<input type="datetime-local" name="年月日" /><br />
+            month<input type="month" name="月" /><br />
+            week<input type="week" name="周" /><br />
+           
+
+            email<input type="email" name="郵件" /><br />
+            url<input type="url" name="網址" /><br />
+            search<input type="search" name="搜尋" /><br />
+
+            color<input type="color" name="color" /><br />
+            range<input type="range" name="range" min="0" max="100" step="5" /><br />
+            number<input type="number" name="number" min="0" max="100" step="5" /><br />
+        </fieldset>
+</form>
+</body>
+</html>

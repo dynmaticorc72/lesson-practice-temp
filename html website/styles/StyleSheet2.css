@@ -1,0 +1,91 @@
+﻿ body {
+            font-size: 70%;
+            color: #767676;
+        }
+
+        * {
+            width:100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #allpage {
+            width: 1024px;
+            margin: auto;
+        }
+
+        .menu {
+            overflow: auto;
+            background-color: rgba(107, 217, 252, 0.63);
+            list-style-type: none;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            border-bottom: #c7c7c7 solid 5px;
+        }
+
+            .menu li {
+                float: left;
+                width: 7em;
+                border-right: #c7c7c7 solid 5px;
+            }
+
+                .menu li a {
+                    display: block;
+                    width: 100%;
+                    line-height: 2.5em;
+                    text-decoration: none;
+                    text-align: center;
+                }
+
+                    .menu li a:hover {
+                        color: #a3e6de;
+                        background-color: rgba(70, 142, 242, 0.86);
+                    }
+
+        .title {
+            width:100%;
+            color: #e1e1e1;
+            line-height: 1.5em;
+            background-color: rgba(73, 63, 199, 0.71);
+            padding-left: 20px;
+        }
+
+        article section {
+            /*margin: 16px;
+            padding-bottom: 10px;
+            border-bottom: #c7c7c7 solid 2px;*/
+        }
+
+            article section p {
+                margin: 10px 0;
+            }
+
+            .sel {
+                list-style: inside decimal;
+            }
+            #content{
+                width:100%;
+                overflow:auto;
+                
+            }
+            article{
+                width:800px;
+                float:left;
+            }
+        aside {
+            width:200px;
+            float:right;
+        }
+            aside dl {
+                width:100%;
+                margin:5px;
+            }
+        footer {
+            width:100%;
+            color: #e1e1e1;
+            line-height: 1.5em;
+            background-color: rgba(73, 63, 199, 0.71);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            text-align:center
+        }

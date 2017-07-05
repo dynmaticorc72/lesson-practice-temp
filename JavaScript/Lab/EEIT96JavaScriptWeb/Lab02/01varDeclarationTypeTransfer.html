@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>01varDeclarationTypeTransfer.html</title>
+    <script>
+        //1.變數宣告
+        var a
+        //定義初始值
+        a = 10
+        //2.變數宣告時可以同時賦予初始值
+        var a = 10;
+
+        //3.不宣告變數，直接賦予初始值
+        a = 10
+        //列印及typeof
+        document.write("a = " + a + " typeof a = " + typeof a + "<br>");
+        //document.write("a=" + a + " typeof a=" + typeof a + "<br>");
+
+        //字串變數
+        a = "abc"
+        document.write("a = " + a + " typeof a = " + typeof a + "<br>");
+        //布林變數
+        b = false
+        document.write("b = " + b + " typeof b = " + typeof b + "<br>");
+        //轉成布林值
+        //0、NaN、""、null、undefined轉成boolean值時為false
+        console.log("Boolean(0)=" + Boolean(0));
+        console.log("Boolean(1)=" + Boolean(1));
+        console.log("Boolean(null)=" + Boolean(null));
+        var b1 = true; 
+        console.log("b1+1 = " + (b1+1) + " typeof b1 = " + typeof b1 + "\n");
+
+        //null
+        var n = null
+        console.log("n = " + n + " typeof n = " + typeof n + "<br>");
+
+        //如果沒有初始值，JavaScript會自動將變數的值初始化為undefined(預設值 default value)
+        var u
+        console.log("u = " + u  + "\n");
+
+        //===============================
+        //建立物件，語法一
+        var person = new Object();
+        
+
+        //定義物件屬性
+        person.name = "jack"
+        person.age = 35
+        console.log("name = " + person.name);
+        console.log("age = " + person.age);
+
+        //建立物件，語法二
+        var person1 = { name: "mary", age: 20 };
+        console.log("name = " + person1.name);
+        console.log("name = " + person1.age);
+
+        document.write(parseInt("33P")+"<br>"); 
+        document.write(parseInt("33.563") + "<br>");
+        document.write(parseInt("P33") + "<br>");
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        .class1 a:link {text-decoration: none;}
+        .class1 a:visited{color:red}
+        .class1 a:hover{text-decoration:underline ; color:green}
+        .class1 a:active{font-size:26px ; color:yellow}
+
+        .list1 {list-style-type:decimal;}
+        .list2 {list-style-type:none;list-style-image:url(images/下載.png)}
+    .inside {list-style-position:inside;background-color:burlywood;}
+    .outside{list-style-position:outside;background-color:burlywood;}
+    
+    </style>
+</head>
+<body>
+ <ul class="list1">
+     <li><a href="first page.html"> home</a> </li>
+     <li><a href="http://www.google.com">google</a></li>
+     <li>
+         <a href="second.html">second</a>
+         <ul class="list2">
+             <li class="inside"><a href="http://www.google.com">google</a></li>
+             <li class="outside"><a href="http://www.google.com">google</a></li>
+             <li style="background-color:aqua"><a href="http://www.google.com">google</a></li>
+         </ul>
+     </li>
+ </ul>
+    <a href="http://www.google.com">google</a>
+</body>
+</html>

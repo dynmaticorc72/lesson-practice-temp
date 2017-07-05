@@ -1,0 +1,71 @@
+﻿   body{
+       font-family:微軟正黑體;
+
+   }
+    *{   
+        margin:0 ;
+        padding:0;
+    }
+    #allpage{
+        width:1024px;
+        margin: auto;
+    }
+    .menu{ 
+        overflow:auto;
+        background-color:rgba(76, 162, 255, 0.82);
+        list-style:none;
+        border-bottom: #808080 solid 5px;
+        border-top-left-radius:15px;
+        border-top-right-radius:15px;        
+         }
+    .menu li{ 
+        float:left;
+        border-right:#808080 solid 5px;
+        width:7em;
+    }
+    .menu li a{
+        display:block;
+        width:100%;
+        color: rgba(48, 27, 239, 0.90);
+        line-height:2.5em;
+        text-align:center;
+        text-decoration:none;
+    }
+    .menu li a:hover{
+        color: rgba(90, 255, 199, 0.53);
+        background-color:rgba(97, 123, 248, 0.73);
+    }
+    #content{
+        overflow:auto;
+        width:100%
+    }
+    article{
+        width:800px;
+        float:left;
+    }
+    .title{
+        background-color:rgba(48, 138, 225, 0.81);
+        color:#58ff98;
+        line-height:2.5em;
+        padding-left:10px;
+    }
+    article section{
+        margin:16px;
+        border-bottom: #747474 solid 5px;
+        padding-bottom:10px;
+    }
+    .sel{
+        list-style:inside decimal;
+    }
+    aside {
+        float:right;
+        width:200px;
+    }
+    footer
+    {
+        color: rgba(48, 27, 239, 0.90);
+        background-color:rgba(76, 162, 255, 0.82);
+        text-align:center;
+        border-bottom-left-radius:15px;
+        border-bottom-right-radius:15px; 
+    }

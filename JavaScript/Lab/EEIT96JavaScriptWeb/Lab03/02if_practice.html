@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>02if.html</title>
+    <script>
+        var a = 10, b = 20;
+
+        //使用window.prompt()方法，取得變數値
+        var age
+        age = parseInt(window.prompt("please input age", 10));
+       
+        if (age > 0 && age <= 6)
+            document.write("免票");
+        else if (age > 6 && age <= 25)
+            document.write("學生票");
+        else if (age > 25 && age <= 65)
+            document.write("全票");
+        else if (age > 65)
+            document.write("免票");
+        else
+            document.write("無效數字");
+            
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

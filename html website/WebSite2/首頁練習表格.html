@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+<link rel="stylesheet" href="樣式練習.css" />
+    <style>
+        .table {
+            width: 400px;
+            border: 3px solid #bcedb2; margin:auto;
+            border-collapse:collapse;
+        }
+
+        td, th {
+            border: 1px solid #b9f19c;
+            padding: 4px;
+        }
+
+        thead {
+            border-bottom: 5px double #88e5f2;
+            text-transform: uppercase;
+            background-color: rgba(117, 146, 225, 0.75);
+        }
+
+        tbody { /*background-color:#f6b1f7*/
+            ;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+            tbody tr:nth-child(2n) {
+                background-color: rgba(125, 171, 235, 0.60);
+            }
+
+            tbody tr:nth-child(2+1) {
+                background-color: rgba(163, 237, 123, 0.60);
+            }
+
+            tbody tr:hover {
+                background-color: rgba(221, 69, 238, 0.77);
+            }
+    </style>
+</head>
+<body>
+    <div id="allpage">
+       
+            <header>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="首頁練習.html">首頁</a></li>
+                        <li><a href="首頁練習表格.html">解決方案</a></li>
+                        <li><a href="">實績介紹</a></li>
+                        <li><a href="">合作夥伴</a></li>
+                        <li><a href="">主要客戶</a></li>
+                        <li><a href="">公司簡介</a></li>
+                        <li><a href="">聯絡我們</a></li>
+                    </ul>
+                </nav>
+                <img src="images/08_gw_hero_1500x300._CB510599067_.jpg" alt="圖片" title="圖片" width="1024" />
+            </header>
+        <div id="content">
+            <article>
+                <h2 class="title">關於本公司</h2>
+               
+                    <table class="table">
+                        <caption><h2>我是表格標題</h2></caption>
+                        <thead>
+                            <tr><th>a</th><th>b</th> <th>c</th> <th>d</th>  </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td rowspan="3">1</td><td>2</td><td>3</td><td>4</td></tr>
+                            <tr><td>2</td><td colspan="2">3</td></tr>
+                            <tr><td>2</td><td>3</td><td>4</td></tr>
+                            <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                        </tbody>
+                    </table>
+
+               
+            </article>
+            <aside>
+                <h2 class="title">最新消息</h2>
+                <dl>
+                    <dt>2010年12月</dt>
+                    <dd>範例股份有限公司網頁全新改版</dd>
+                </dl>
+                <dl>
+                    <dt>2010年12月</dt>
+                    <dd>範例股份有限公司網頁全新改版</dd>
+                </dl>
+                <dl>
+                    <dt>2010年12月</dt>
+                    <dd>範例股份有限公司網頁全新改版</dd>
+                </dl>
+                <dl>
+                    <dt>2010年12月</dt>
+                    <dd>範例股份有限公司網頁全新改版</dd>
+                </dl>
+                <dl>
+                    <dt>2010年12月</dt>
+                    <dd>範例股份有限公司網頁全新改版</dd>
+                </dl>
+
+            </aside>
+        </div>
+        <footer>
+            <p>E-amil:aaa@gmail.com &nbsp; Tel:(02)2222-2222 &nbsp; 台北市復興南路一段390號 &nbsp; &copy; 2014 All Rights Reserved Quality Art Technology CO. </p>
+        </footer>
+    </div>
+</body>
+</html>
