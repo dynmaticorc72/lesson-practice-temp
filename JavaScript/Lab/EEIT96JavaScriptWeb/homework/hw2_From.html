@@ -41,7 +41,7 @@
         function chkName() {
             var name = document.getElementById("account1").value;
             var re = /^[\u4E00-\u9FA5]+$/
-            if (name.length > 2) {
+            if (name.length >= 2) {
                 if (re.test(name)) {
                     document.getElementById("namesp").innerHTML = "OK";
                 } else {
@@ -55,7 +55,7 @@
                 document.getElementById("namesp").innerHTML = "<span style='color:red'>至少兩字以上</span>";
             }
 
-
+        }
 
             function chkPassword() {
                 //取得元素值
@@ -74,11 +74,13 @@
                             flag1 = true;
                         } else if (pwdAt <= 9 && pwdAt >= 0) {
                             flag2 = true;
+                        }else if (theChr == "!" || theChr == "@" || theChr == "#" || theChr == "$" || theChr == "%" || theChr == "^" || theChr == "&" || theChr == "*"){
+                            flag3 = true;
                         }
-                        if (flag1 && flag2) {
+                        if (flag1 && flag2 &&flag3) {
                             break;
                         }
-                    } if (flag1 && flag2) {
+                    } if (flag1 && flag2 && flag3) {
                         document.getElementById("pwdsp").innerHTML = "OK";
                     } else {
                         document.getElementById("pwdsp").innerHTML = "<span style='color:red'>輸入錯誤</span>";
@@ -92,8 +94,8 @@
             }
 
             function chkDate() {
-                var dayS = document.getElementById("day").value;
-                var date = dateS.split("/");
+                var dayS = document.getElementById("chkDate").value;
+                var date = dayS.split("/");
                 var year = date[0]
                 var month = date[1]
                 var day = date[2]
@@ -110,7 +112,7 @@
 
             }
 
-        }
+        
 
         window.onload= function(){
             document.getElementById("account1").onblur = chkName;  //事件繫結，
@@ -126,7 +128,7 @@
             <legend>From check</legend>
             <div class="st1">
                 <label for="account1" class="t1">姓名:</label><input type="text" name="account"  id="account1" placeholder="王建民" size="10" autocomplete="off" autofocus />
-                <!--<input type="button" value="CheckName" onclick="chkName();" />--> <span id="ininame" style="color:red"></span><br />
+                <!--<input type="button" value="CheckName" onclick="chkName();" />--> <span id="ininame" style="color:red"></span>
                 <span id="namesp"></span>
                 <p>(1.不可空白，2.至少兩個字以上，3.必須全部為中文字)</p>
             </div>
