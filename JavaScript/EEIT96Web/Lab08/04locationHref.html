@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>04locationHref.html</title>
+    <script>
+        //http://www.w3schools.com/jsref/dom_obj_select.asp
+        function redirect(x) {
+            //alert(x);
+            var linker=["#","http://taipei.iiiedu.org.tw","http://tw.yahoo.com","http://www.google.com.tw"];
+            location.href = linker[x];
+
+            //switch (x) {
+            //    case 0: location.href = "#"; break;
+            //    case 1: location.href = "http://taipei.iiiedu.org.tw"; break;
+            //    case 2: location.href = "http://tw.yahoo.com"; break;
+            //    case 3: location.href = "http://www.google.com.tw"; break;
+
+            //}
+        }
+    </script>
+</head>
+<body>
+    <!--取得在下拉式選單(<select>)所選取的索引(selectedIndex)-->
+    <select onchange="redirect(this.selectedIndex);" >
+		<option>selected</option>
+		<option>IIIEDU</option>
+		<option>YAHOO</option>
+		<option>GOOGLE</option>			
+	</select>    
+</body>
+</html>

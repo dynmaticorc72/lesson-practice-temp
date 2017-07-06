@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>09imageObject.html</title>
+    <link rel="icon" href="images/EEIT_logo.png" type="image/x-icon" />   
+    <script>
+        document.title = "EEIT96";
+        //=============================================================
+        //1. 參數傳送使用<area>物件的id
+        //2. 使用 document.getElementsByTagName("area")取得所有area元素
+        //3. 使用 document.querySelectorAll("area")取得所有area元素
+        //=============================================================
+        window.onload = function () {
+            //document.getElementById("idTaipei").onmouseover = mouseOver;//事件繫結
+            //document.getElementById("idTaipei").onmouseout = mouseOut;
+            //document.getElementById("idTaipei").onclick = Click;    
+            //document.getElementById("idTaipei").onmouseover = function () { mouseOver(this.id); }//事件繫結
+            //document.getElementById("idTaipei").onmouseout = mouseOut;
+            //document.getElementById("idTaipei").onclick = function () { Click(this.id); }
+
+            //var areas = document.getElementsByTagName("area");   
+            var areas = document.querySelectorAll("area.areabut");
+            var areasLen = areas.length;
+            alert(areasLen);
+            for (var i = 0; i < areasLen; i++) {
+                areas[i].onmouseover = function () { mouseOver(this.id); }
+                areas[i].onmouseout = mouseOut;
+                areas[i].onclick = function () { Click(this.id); }
+            }
+        };  //window.onload
+
+        function mouseOver(areaid) {            
+            //document.images[0].src = "images/MapTaipei.gif";  
+            document.images[0].src = "images/Map"+areaid.substr(2)+".gif";
+        }
+
+
+        function mouseOut() {            
+            document.images[0].src = "images/map00.gif";
+        }
+
+
+        function Click(areaid) {            
+            //document.getElementById("mapdiv").innerHTML = "<img src='images/Taipei.gif'/>";
+            document.getElementById("mapdiv").innerHTML = "<img src='images/"+areaid.substr(2)+".gif'/>";
+        }
+    </script>
+</head>
+<body>
+    <div style="float:left;width:200px;height:343px;margin-top:20px;">
+        <img id="imgMap" alt="" src="images/map00.gif"  usemap="#FPMap0"/>
+            <map id="FPMap0" name="FPMap0">
+                <area  id="idTaipei" class="areabut" coords="136,21,144,13,151,29,145,38,137,21"  shape="poly" />
+                <area  id="idTaoyuan" coords="95,38,120,22,132,34,125,45,138,64,128,78,95,37"  shape="poly" />
+                <area  id="idTaichung" class="areabut" coords="46,113,58,89,87,104,120,91,134,100,122,113,81,122,70,134,45,112,45,112"  shape="poly" />
+                <area  id="idKaohsiung" class="areabut" coords="18,241,39,242,86,185,98,201,76,243,72,250,46,251,39,283,25,259,18,240"  shape="poly" />
+            </map>
+    </div>
+    <div id="mapdiv" style="float:left;width:auto;height:auto;"></div>
+</body>
+</html>
