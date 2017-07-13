@@ -4,8 +4,129 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 	<meta charset="utf-8" />
+    <script>
+        window.onload = function () {
+            document.getElementById("yearColn").onchange = yearChange;
+            document.getElementById("monthColn").onchange = monthChange;
+            document.getElementById("dateColn").onchange = dateChange;
+
+            var calendarM = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ]
+
+            var calendarD = [
+                31,
+                28,
+                31,
+                30,
+                31,
+                30,
+                31,
+                31,
+                30,
+                31,
+                30,
+                31
+            ]
+            var calendarL = [
+                31,
+                29,
+                31,
+                30,
+                31,
+                30,
+                31,
+                31,
+                30,
+                31,
+                30,
+                31
+            ]
+
+
+            function yearChange() {
+
+                for (var i = 0; i < 12; i++) {
+                    var str = str + "<option value='" + calendarD[i] + "'>" + calendarM[i] + "</option>"
+                }
+
+                document.getElementById("monthColn").innerHTML = ("<option>MONTH</option>" + str);
+            };
+
+            function monthChange() {
+
+                var getyear = document.getElementsByTagName("option")[(document.getElementById("yearColn").selectedIndex)].value;
+                var monthIndex = document.getElementById("monthColn").selectedIndex;
+
+                if (getyear % 100 != 00 && getyear % 4 == 0 || getyear % 400 == 0) {
+                    for (var i = 1; i < calendarL[monthIndex - 1] + 1; i++) {
+
+                        var str = str + "<option>" + i + "</option>"
+                    }
+                } else {
+                    for (var i = 1; i < calendarD[monthIndex - 1] + 1; i++) {
+
+                        var str = str + "<option>" + i + "</option>"
+                    }
+                }
+
+                document.getElementById("dateColn").innerHTML = ("<option>DATE</option>" + str);
+            };
+
+            function dateChange() {
+
+                var getyear = document.getElementsByTagName("option")[(document.getElementById("yearColn").selectedIndex)].value;
+                var getmonth = document.getElementById("monthColn").selectedIndex;
+                var getdate = document.getElementById("dateColn").value;
+
+                document.getElementById("resultSet").innerHTML = ("<span>DATE CHOOSEN:<span style='text-decoration:underline;font-size:2em;color:orange;' > " + getyear + "/" + getmonth + "/" + getdate + "</span></span>");
+            };
+        }
+    </script>
+
 </head>
 <body>
 
-</body>
+        <div id="calendarPanel" class="st1">
+            <div id="selectors">
+                <select id="yearColn">
+                    <option>YEAR</option>
+                    <option>2010</option>
+                    <option>2011</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                </select>
+                <select id="monthColn">
+                    <option>MONTH</option>
+                    <option></option>
+                </select>
+                <select id="dateColn">
+                    DATE
+                    <option>DATE</option>
+                    <option></option>
+                </select>
+            </div>
+            <div id="showResult">
+                <span id="resultSet"></span>
+            </div>
+        </div>
+    </body>
 </html>

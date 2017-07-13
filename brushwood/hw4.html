@@ -125,6 +125,16 @@
             i = (i < 9) ? ++i : 0;
             mainpic.src = thumbnailImages[i].src;
         }
+       
+        setTimeout(function () {
+            clearInterval(stillTimer);
+            stillTimer = setInterval(function () {
+                i = (i < 9) ? ++i : 0;
+                mainpic.src = thumbnailImages[i].src;
+            }, 1000);
+        }, 1000);
+        
+
 }
 
         //images click & display
